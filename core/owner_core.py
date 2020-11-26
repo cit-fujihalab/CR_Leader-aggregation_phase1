@@ -38,6 +38,8 @@ STATE_STANDBY = 1
 STATE_CONNECTED_TO_NETWORK = 2
 STATE_SHUTTING_DOWN = 3
 
+FAILURE_CHECK_INTERVAL = 5
+FAILURE = True
 # TransactionPoolの確認頻度
 # 動作チェック用に数字小さくしてるけど、600(10分)くらいはあって良さそ
 
@@ -91,7 +93,8 @@ class OwnerCore(object):
 
 	def request_cross_reference(self):
 		#time計測なし self.crm.time_start_phase1()#time計測なし
-		print('thread-started')
+		self.check_count = 11
+		self.check_failure()# 故障チェック
 		print(" ============= Phase1 start =============")
 		self.crm.inc += 1
 		print("start_request_cross_reference")
@@ -100,6 +103,7 @@ class OwnerCore(object):
 		self.cm.send_msg_to_all_owner_peer(new_message)
 
 	def start_cross_reference(self):
+		self.check_failure()# 故障チェック
 		print("start_request_crose_reference")
 		block_hash = str(np.random.randint(10000000, 100000000))
 		block_msg = {}
@@ -164,8 +168,6 @@ class OwnerCore(object):
 		print("All in Phase3")
 		
 	"""
-	#if self.Accept_list > 1: #current_accept_list
-			#1以上なら確認する。
 
 	#def Failure_resistance_disconnection(self):#耐停止故障
 		#受信できないドメインに再送（相手が悪い）
@@ -173,33 +175,90 @@ class OwnerCore(object):
 	#def Failure_resistance_disconnectionAtoB(self):#耐停止故障
 		#自分が送信できない（自分が悪い?）
 	
-	def start_ref_building(self):
-		self.ref = threading.Timer(20, self.check_resisrtance)
-		self.ref.start()
+	def check_failure(self):
+		print("check_failureの動作")
+		self.check = threading.Timer(FAILURE_CHECK_INTERVAL, self.check_mode)
+		self.check.start()
 
-	def check_resistance(self):
-		if self.check_count == 1:#1回目に呼ばれたら
+	def check_mode(self):
+# MSG_REQUEST_CROSS_REFERENCEが帰ってこなかったとき
+		if self.check_count == 11:#1回目に呼ばれたら
 			if len(self.Accept_list) == 1:
-				pass
+				print("not Failure ok! ====== 故障なし ======")
 			else:
-				print("どこか故障した？")
+				print("!!!!!!!!!!!!ドメイン内のだれか故障したかもよ？!!!!!!!!!!!!!!!!!!!")
 				print(self.Accept_list)
-				
-		if self.check_count == 2:
+				#再度チェック機関を呼び出し
+				print("故障再度確認")
+				self.check_count == 12
+				self.check_failure()
+
+		elif self.check_count == 12:#2回目に呼ばれたら
+			if len(self.Accept_list) == 1:
+				print("not Failure ok! ====== やっぱり故障なし ======")
+
+			else:
+				print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+				print("!!!!!!!!!!!!再確認したけどやっぱりドメイン内のだれか故障したかもよ？!!!!!!!!!!!!!!!!!!!")
+				print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+				print(self.Accept_list)
+
+# MSG_CROSS_REFFERENCEが帰ってこなかったら
+		elif self.check_count == 21:#2回目に呼ばれたら
 			if len(self.Send_list) == 1:
-				print("not Failureok!")
+				print("not Failure ok! ====== 故障なし ======")
 				pass
 			else:
-				print("どこか故障した？")
+				print("!!!!!!!!!!!!ドメイン内のだれか故障したかもよ？!!!!!!!!!!!!!!!!!!!")
+				print(self.Send_list)
+				print("故障再度確認")
+				self.check_count == 22 #再検証
+				self.check_failure()
+
+		elif self.check_count == 22:
+			if len(self.Send_list) == 1:
+				print("not Failure ok! ====== 故障なし ======")
+
+			else:
+				print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+				print("!!!!!!!!!!!!再確認したけどやっぱりドメイン内のだれか故障したかもよ？!!!!!!!!!!!!!!!!!!!")
+				print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+				print(self.Send_list)
+				C_list = current_list_remove(self.Send_list)
+				self.Send_list.remove(C_list)
+				print(self.Send_list)
+				print(len(self.Send_list))
+				#確認できたら再開する.
+
+		else:
+			print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+			print("ココを通ったらマズイですよ")
+			print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+			pass
+
+		def current_list_remove(self, C_list):
+			#故障したと思われるドメインを一時リストから除外
+			print(C_list)
+			C_list.remove(self.owner_node_host, self.owner_node_port)
+			if C_list == 1:
+				print("故障ドメインの回避")
+				return C_list
+
+			elif C_list >= 2:
+				print("故障ノードが2つ以上")
+
+			else:
+				print("!!!!!!!!!!!!一大事!!!!!!!!!!!!!!")
 
 
 	def __handle_message(self, msg, is_owner, peer=None):
 
 		if msg[2] == MSG_REQUEST_CROSS_REFERENCE:
-			print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-			print("故障しました。sleep10000")
-			print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")	
-			sleep(10000)
+			if FAILURE == True:
+				print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+				print("故障しました。sleep10000　- Failure ")
+				print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")	
+				sleep(10000)
 
 			#Failure_resistance_time = #耐故障猶予時間
 			print("MSG_REQUEST_CROSS_REFERENCE:")
@@ -227,7 +286,8 @@ class OwnerCore(object):
 			if len(self.Accept_list) == 1: #Accept Count
 				print("ok-----------------------------CROSS_REFERENCE")
 				print("SEND_START")
-				new_message = self.cm.get_message_text(START_CROSS_REFFERENCE)
+				self.check_count = 22
+				self.cm.get_message_text(START_CROSS_REFFERENCE)
 				self.cm.send_msg_to_all_owner_peer(new_message)
 				# 履歴交差開始
 				print("accept next履歴交差開始")
