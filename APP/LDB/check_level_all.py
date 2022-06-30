@@ -5,6 +5,8 @@ import binascii
 import hashlib
 import os
 
+from settings import DIF
+
 
 # １ファイルごとにJSON形式で読み込み。最後のブロックを保持しつつ次のファイル読んでいく
 # かつ、整合性もチェックする
@@ -28,7 +30,7 @@ def valid_all(ldb_p):
 
 # -------------------------------------------------------------------------------------------------------------------------
 
-def is_valid_block(prev_block_hash, block, difficulty=5):
+def is_valid_block(prev_block_hash, block, difficulty=DIF):
     # ブロック単体の正当性を検証する
     suffix = '0' * difficulty
     nonce = block['nonce']

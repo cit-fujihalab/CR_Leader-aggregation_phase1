@@ -1,7 +1,9 @@
 # HOST_IP_LAYER_0 = '192.168.0.127'
-HOST_IP_LAYER_0 = '10.84.242.113'
-# HOST_IP_LAYER_0 = '10.84.240.77'
+# HOST_IP_LAYER_0 = '10.84.242.113'
+HOST_IP_LAYER_0 = '10.84.242.73'
 
+DIF = 1 # difficulty 難易度(suffix = '0' * difficulty)
+REF_COUNT = 5
 LEADER_UPDATE_INTERVAL = 45 # ハートビートを送る間隔 [min]
 LEADER_CHECK_INTERVAL =  60 # リーダーが故障不在じゃないか確認するループのインターバル [min]
 FAILURE = False

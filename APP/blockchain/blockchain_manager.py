@@ -121,7 +121,7 @@ class BlockchainManager:
             print('invalid chain cannot be set...')
             return None, []
 
-    def is_valid_block(self, prev_block_hash, block, difficulty=5):
+    def is_valid_block(self, prev_block_hash, block, difficulty=DIF):
         # ブロック単体の正当性を検証する
         suffix = '0' * difficulty
         block_4_pow = copy.deepcopy(block)

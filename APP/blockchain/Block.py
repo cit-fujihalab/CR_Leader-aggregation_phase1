@@ -2,6 +2,7 @@ import json
 from time import time
 import hashlib
 import binascii
+from settings import *
 from datetime import datetime
 
 from cross_reference.cross_reference_manager import CrossReferenceManager
@@ -54,7 +55,7 @@ class Block:
 
 		return d
 
-	def _compute_nonce_for_pow(self, message, difficulty=5):
+	def _compute_nonce_for_pow(self, message, difficulty = DIF):
 		# difficultyの数字を増やせば増やすほど、末尾で揃えなければならない桁数が増える。
 		i = 0
 		suffix = '0' * difficulty

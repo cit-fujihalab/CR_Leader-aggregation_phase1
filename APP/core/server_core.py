@@ -7,6 +7,7 @@ import zipfile
 import os
 from settings import *
 import logging
+import sys
 
 from LDB import main_level
 
@@ -57,6 +58,7 @@ class ServerCore(object):
 		self.tp = TransactionPool()
 
 		self.block_num = 0
+		self.refblock_count = 0 #履歴交差回数を確認して 
 		self.Phase2_list = []
 		# self.Phase3_list = []
 
@@ -140,6 +142,8 @@ class ServerCore(object):
 
 			if cross_reference:
 				self.crm.ref_block_number(self.block_num)
+				self.refblock_count += 1 #履歴交差回数の確認
+				print("===== 履歴交差回数 =====", self.refblock_count)
 
 			if result_tp == []:
 				print('Transaction Pool is empty ...')
@@ -199,14 +203,26 @@ class ServerCore(object):
 		self.flag_stop_block_build = False
 		self.is_bb_running = False
 		obj = self.bm.chain
-		filename = "Current_Blockchain" + str(self.my_port) + ".json"
-		self.save_json(filename, obj)
+		if self.refblock_count == REF_COUNT: ##規定回数を超えたら保存
+			filename = "Current_Blockchain" + str(self.my_port) + ".json"
+			self.save_json(filename, obj)
+			self.flag_stop_block_build = True #ブロック生成を停止
+			print("ブロック生成を停止しました")
+			end_timer = threading.Timer(30, self.end_P)
+			end_timer.start()
+		else:
+			x = REF_COUNT - self.refblock_count
+			print(" =========== 規定履歴交差回数まで残り" + str(x) + "回 =========== ")
 		self.bb_timer = threading.Timer(CHECK_INTERVAL, self.__generate_block_with_tp)
 		self.bb_timer.start()
 
 	def save_json(self, filename, obj):
 		with open(filename, 'w', encoding = 'utf-8', newline = '\n') as fp:
 			json.dump(obj, fp)
+
+	def end_P(self):
+		print("プログラムを終了")
+		sys.exit()
 
 	def Confirmed_block(self):#確定ブロックを更新
 		print("Confirmed_block" + str(CONFIRMED_BLOCK) + "番目のブロック")
