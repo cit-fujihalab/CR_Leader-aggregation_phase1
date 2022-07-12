@@ -208,8 +208,7 @@ class ServerCore(object):
 			self.save_json(filename, obj)
 			self.flag_stop_block_build = True #ブロック生成を停止
 			print("ブロック生成を停止しました")
-			end_timer = threading.Timer(30, self.end_P)
-			end_timer.start()
+			
 		else:
 			x = REF_COUNT - self.refblock_count
 			print(" =========== 規定履歴交差回数まで残り" + str(x) + "回 =========== ")
@@ -219,10 +218,6 @@ class ServerCore(object):
 	def save_json(self, filename, obj):
 		with open(filename, 'w', encoding = 'utf-8', newline = '\n') as fp:
 			json.dump(obj, fp)
-
-	def end_P(self):
-		print("プログラムを終了")
-		sys.exit()
 
 	def Confirmed_block(self):#確定ブロックを更新
 		print("Confirmed_block" + str(CONFIRMED_BLOCK) + "番目のブロック")
