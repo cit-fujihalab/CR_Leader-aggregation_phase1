@@ -1,11 +1,11 @@
 HOST_IP_LAYER_0 = '??.??.???.??'
 
 DIF = 1 # difficulty 難易度(suffix = '0' * difficulty)
-REF_COUNT = 100 # 履歴交差規定回数
+REF_COUNT = 10 # 履歴交差規定回数
 LEADER_UPDATE_INTERVAL = 45 # ハートビートを送る間隔 [sec]
 LEADER_CHECK_INTERVAL =  60 # リーダーが故障不在か確認するループのインターバル [sec]
 FAILURE = False
-CR_INTERVAL = 50 # 履歴交差間隔
+CR_INTERVAL = 30 # 履歴交差間隔
 ALLOWABLE_TIME = 200 # HEART_BEATの検証許容時間[min]
 tkinter_state = False # tkinterを起動するかどうか.
 CR_STATE = True # 履歴交差を行うか.
