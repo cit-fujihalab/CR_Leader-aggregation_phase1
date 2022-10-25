@@ -2,6 +2,12 @@
 # Phase1計測を合意待ち時間含めた実験ノード
 
 
+
+本ソースコードは以下にソースコードの通信輻輳を改善したソースコードとなる.
+https://github.com/cit-fujihalab/Cross-ref_for_Many-Nodes
+
+
+
 ## 必要モジュールを以下に記載
 （equirements.shを実行すると以下のコマンドが実行される）
 
