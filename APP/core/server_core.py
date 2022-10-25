@@ -61,6 +61,7 @@ class ServerCore(object):
 		self.refblock_count = 0 #履歴交差回数を確認して 
 		self.Phase2_list = []
 		# self.Phase3_list = []
+		self.filesave_flag = True
 
 		if core_node_host and core_node_port:
 			self.plz_share_db()
@@ -157,7 +158,7 @@ class ServerCore(object):
 				self.tp.clear_my_transactions(index)
 				if cross_reference:
 					print("履歴交差部に入っているから情報をクリアします.")
-					logging.debug("履歴交差部に入っているから情報をクリアします.")
+					logging.info("履歴交差部に入っているから情報をクリアします.")
 					self.crm.clear_my_reference()
 				tp2 = self.crm.time_stop_phase2()
 				if tp2:
@@ -203,12 +204,25 @@ class ServerCore(object):
 		self.flag_stop_block_build = False
 		self.is_bb_running = False
 		obj = self.bm.chain
+		if self.filesave_flag == True:
+			filename01 = "Current_Blockchain" + str(self.my_port) + ".json"
+			self.save_json(filename01, obj)
+
 		if self.refblock_count == REF_COUNT: ##規定回数を超えたら保存
-			filename = "Current_Blockchain" + str(self.my_port) + ".json"
-			self.save_json(filename, obj)
 			self.flag_stop_block_build = True #ブロック生成を停止
 			print("ブロック生成を停止しました")
-			
+			if self.filesave_flag == True:
+				if self.crm.phase1_list:
+					filename02 = "Phase1_time" + str(self.my_port) + ".txt"
+					print("ファイルかきこ")
+					for i in self.crm.phase1_list:
+						with open(filename02, mode='a') as f:
+							f.write(str(i) + "\n")
+					self.crm.phase1_list.clear()
+					self.filesave_flag = False
+			else :
+				print("============= self.filesave_flag == False =============")
+
 		else:
 			x = REF_COUNT - self.refblock_count
 			print(" =========== 規定履歴交差回数まで残り" + str(x) + "回 =========== ")
@@ -216,8 +230,14 @@ class ServerCore(object):
 		self.bb_timer.start()
 
 	def save_json(self, filename, obj):
-		with open(filename, 'w', encoding = 'utf-8', newline = '\n') as fp:
-			json.dump(obj, fp)
+		try:
+			with open(filename, 'w', encoding = 'utf-8', newline = '\n') as fp:
+				json.dump(obj, fp)
+		
+		except:
+			logging.debug("ファイルを作成")
+			with open(filename, 'w', encoding = 'utf-8', newline = '\n') as fp:
+				json.dump(obj, fp)
 
 	def Confirmed_block(self):#確定ブロックを更新
 		print("Confirmed_block" + str(CONFIRMED_BLOCK) + "番目のブロック")

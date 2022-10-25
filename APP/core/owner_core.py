@@ -103,14 +103,14 @@ class OwnerCore(object):
 	def start(self, crm = None):
 		self.server_state = STATE_STANDBY
 		self.cm.start()
-		logging.debug('原始ノードはjoin_DMnetworkは起動しない.')
+		logging.debug('debugメッセージ : 原始ノードはjoin_DMnetworkは起動しない.')
 		self.crm = crm
 		self.Raft_Leader_state = True#if
 		self.Raft_Leader_loop()
 
 	def window(self):
 		if tkinter_state == True:
-			print("Tkinterを起動します。")
+			print("debugメッセージ : Tkinterを起動します。")
 			logging.debug('debugメッセージ : Tkinter')
 			self.ww.generate_genesis_window()
 
@@ -120,20 +120,23 @@ class OwnerCore(object):
 
 	def create_log(self):
 		try:
-			file_name = "LOG/raft_status" + str(self.my_port) + ".log"
+			file_name = "logging/raft_status" + str(self.my_port) + ".log"
 			formatter = '%(asctime)s: %(message)s'
-			logging.basicConfig(format=formatter, filename= file_name, level = logging.DEBUG)
-
+			# logging.basicConfig(format=formatter, filename= file_name, level = logging.DEBUG)
+			logging.basicConfig(format=formatter, filename= file_name, level = logging.INFO)
+			
 		except:
-			file_name = "APP/LOG/raft_status" + str(self.my_port) + ".log"
+			file_name = "APP/logging/raft_status" + str(self.my_port) + ".log"
 			formatter = '%(asctime)s: %(message)s'
-			logging.basicConfig(format=formatter, filename= file_name, level = logging.DEBUG)
+			# logging.basicConfig(format=formatter, filename= file_name, level = logging.DEBUG)
+			logging.basicConfig(format=formatter, filename= file_name, level = logging.INFO)
+
 
 
 	def join_DMnetwork(self):
-		logging.debug('debugメッセージ : join_DMnetwork')
+		logging.info('debugメッセージ : join_DMnetwork')
 		if self.owner_node_host != None:
-			logging.debug('debugメッセージ : join_DMnetwork')
+			logging.info('debugメッセージ : join_DMnetwork')
 		
 			self.server_state = STATE_CONNECTED_TO_NETWORK # 状態：親ノードへ接続中
 			self.cm.join_DMnetwork(self.owner_node_host, self.owner_node_port)
@@ -144,7 +147,7 @@ class OwnerCore(object):
 
 		else:
 			print('This server is running as Genesis Owner Node...')
-			logging.debug('debugメッセージ : leaderがいませんでした。')
+			logging.info('debugメッセージ : leaderがいませんでした。')
 			#Raftのリーダー状態の更新
 			self.Raft_Leader_state = True
 			self.Raft_Leader_loop()
@@ -160,7 +163,7 @@ class OwnerCore(object):
 		self.Follower_time = time.time() #datetime(now.year, now.month, now.day, now.hour, now.minute, now.second)
 		# 現在時刻の確認.
 		print("現在時刻の確認")
-		logging.debug('debugメッセージ : 現在の時刻の確認')
+		logging.info('debugメッセージ : 現在の時刻の確認')
 		if  self.Follower_time < self.Last_Heartbeat + ALLOWABLE_TIME:
 			print("Renew_Last_Heartbeat", float(self.Last_Heartbeat + ALLOWABLE_TIME ))
 			print("Last_Heartbeat",self.Last_Heartbeat)
@@ -168,7 +171,7 @@ class OwnerCore(object):
 			print("リーダーのハートビート有効期間")
 			print("Followerとして居続ける")
 			print("self.Raft_Voting_state", self.Raft_Voting_state)
-			logging.debug('debugメッセージ : Followerとして居続ける')
+			logging.info('debugメッセージ : Followerとして居続ける')
 			self.Raft_Follower_side = threading.Timer(LEADER_CHECK_INTERVAL, self.Time_judge_is_Follower)
 			self.Raft_Follower_side.start()
 
@@ -179,8 +182,8 @@ class OwnerCore(object):
 			print("Last_Heartbeatの方が先の時間")
 			print("リーダーのハートビート有効期限切れ")
 			print("Candidateする")
-			logging.debug('リーダーのハートビート有効期限切れ')
-			logging.debug('debugメッセージ : Candidate')
+			logging.info('リーダーのハートビート有効期限切れ')
+			logging.info('debugメッセージ : Candidate')
 			print("self.Raft_Voting_state", self.Raft_Voting_state)
 			self.Raft_Candidate_Leader()
 
@@ -190,13 +193,13 @@ class OwnerCore(object):
 		self.cm.connection_close()
 
 	def Raft_Follower_loop(self): # FOLLOWER側の確認LOOP
-		logging.debug('debugメッセージ : Follower_loop')
+		logging.info('debugメッセージ : Follower_loop')
 		print("000000000000000000000000Follower_loop000000000000000000000000")
 		self.Time_judge_is_Follower()
 		
 	def Raft_Leader_loop(self): # リーダー側の更新LOOP
 		CR_stamp = time.time()
-		logging.debug('1111111111111111111111111Leader_loop1111111111111111111111111')
+		logging.info('1111111111111111111111111Leader_loop1111111111111111111111111')
 		print("1111111111111111111111111Leader_loop1111111111111111111111111")
 		if self.ww.Break_state == True:
 			logging.debug('Tkinterから故障命令')
@@ -211,11 +214,11 @@ class OwnerCore(object):
 		logging.debug("self.CR_Last_stamp" + str(self.CR_Last_stamp))
 
 		if CR_INTERVAL < CR_stamp - self.CR_Last_stamp :
-			logging.debug("CR_loop発火")
+			logging.info("CR_loop発火")
 			self.CR_loop()
 
 		else :
-			logging.debug("最後の履歴交差から" + str(CR_INTERVAL) + "経過していない")
+			logging.info("最後の履歴交差から" + str(CR_INTERVAL) + "経過していない")
 
 	def Leader_broken(self):
 		logging.debug('故障させます。sleep(10000000)' + str(self.my_port))
@@ -242,7 +245,7 @@ class OwnerCore(object):
 		logging.debug('Raftの投票関連をリセット。')
 
 	def Send_heartbeat(self):
-		logging.debug("Send_heartbeat")
+		logging.info("Send_heartbeat")
 		if self.Raft_Leader_state == True: #port番号と照合
 			self.Lastping_leader = time.time()
 
@@ -255,13 +258,13 @@ class OwnerCore(object):
 			if RenewLastping_Leader - self.Lastping_leader > 5:
 				new_message = self.cm.get_message_text(RAFT_HEARTBEAT)
 				self.cm.send_msg_to_all_owner_peer(new_message) #全体に送信
-				logging.debug("リーダー権の継続"+str(self.my_ip) + "," + str(self.my_port))
+				logging.info("リーダー権の継続"+str(self.my_ip) + "," + str(self.my_port))
 				print("リーダー権の継続")			
 				self.Raft_Leader_loop()
 
 			else:
 				print("直近に5秒以内にping送っている")
-				logging.debug('直近に5秒以内にping送っている')
+				logging.info('直近に5秒以内にping送っている')
 				self.Raft_Leader_loop()
 
 		else :
@@ -288,9 +291,9 @@ class OwnerCore(object):
 			#time outを決める。
 
 	def CR_loop(self):#自分がリーダーか確認して
-		logging.debug('CR_loop開始')
+		logging.info('CR_loop開始')
 		n = self.crm.ref_block_number
-		logging.debug("1つ前の履歴交差ブロックnum : " + str(n))
+		logging.info("1つ前の履歴交差ブロックnum : " + str(n))
 		if self.CR_state == True:
 			if self.cm.adding_timer + NEW_CONNECTION < time.time():
 				self.CR_Last_stamp = time.time()
@@ -307,7 +310,6 @@ class OwnerCore(object):
 			else:
 				logging.debug("新しいコネクションが" + str(NEW_CONNECTION) + "秒以内にあり") 
 				print("")
-		#一定時間経過していたら
 		#履歴交差を開始する。
 		else:
 			print("理由があって履歴交差を行わない。")
@@ -318,6 +320,7 @@ class OwnerCore(object):
 	def request_cross_reference(self):
 		print("履歴交差開始stateを確認")
 		#time計測なし self.crm.time_start_phase1()#time計測なし
+		self.crm.time_start_phase1()
 		self.check_count = 11
 		print(" ============= Phase1 start =============")
 		self.crm.inc += 1
@@ -338,7 +341,7 @@ class OwnerCore(object):
 		new_message = self.cm.get_message_text(MSG_CROSS_REFFERENCE, json.dumps(block_msg, sort_keys = True ,ensure_ascii = False))
 		# print("new_message",new_message)
 		print("============= start_request_crose_reference =============")
-		logging.debug("============= start_request_crose_reference =============")
+		logging.info("============= start_request_crose_reference =============")
 		self.Send_heartbeat()
 		self.cm.send_msg_to_all_owner_peer(new_message)
 
@@ -354,7 +357,7 @@ class OwnerCore(object):
 		return hashlib.sha256(message.encode()).hexdigest()
 
 	def complete_cross_block(self, msg):
-		logging.debug("complete_cross_block()")
+		logging.info("complete_cross_block()")
 		#time計測なし if self.overtime_flag:
 		#	overtime = str( str(self.overtime_c ) + "turn" + str(self.overtime_t) + "sec \n" + str(msg) + "\n")
 		#	with open( 'TIME/overtime.txt' , mode ='a') as f:
@@ -391,7 +394,7 @@ class OwnerCore(object):
 		self.REcount = 0
 		# self.crm.flag = False
 		self.crm.myblock_in = False
-		logging.debug("cross_reference_reset is ok----Full-Reset")
+		logging.info("cross_reference_reset is ok----Full-Reset")
 		print("ok----Full-Reset")
 
 
@@ -426,6 +429,7 @@ class OwnerCore(object):
 			pass
 
 		elif msg[2] == MSG_REQUEST_CROSS_REFERENCE:
+			self.crm.time_start_phase1()
 			self.cross_reference_reset()
 			# Re-Set
 			print("cross_reference_ALL RESET")
@@ -488,7 +492,7 @@ class OwnerCore(object):
 					self.start_cross_reference()
 
 		elif msg[2] == START_CROSS_REFFERENCE: #リーダー集約時は通らない。
-			logging.debug(START_CROSS_REFFERENCE)
+			logging.info(START_CROSS_REFFERENCE)
 			print("START_CROSS_REFFERENCE")
 			print("履歴交差開始")
 			if LEADER_AGGREGATION == False:
@@ -498,7 +502,7 @@ class OwnerCore(object):
 				logging.debug("リーダーが集約するモード")
 
 		elif msg[2] == MSG_CROSS_REFFERENCE_LEADER_AGGREGATION: #追加0222
-			logging.debug('MSG_CROSS_REFFERENCE_LEADER_AGGREGATION @' + str(peer))
+			logging.info('MSG_CROSS_REFFERENCE_LEADER_AGGREGATION @' + str(peer))
 			# cross_reference部のへの追加
 
 			msg_loads = json.loads(msg[4])
@@ -541,15 +545,19 @@ class OwnerCore(object):
 				logging.debug("self.reference" + str(self.crm.reference))
 				logging.debug("======= type =======" + str(type(self.crm.reference)))
 				#logging.debug("self.reference" + str(P))
-				print(" ============= (マイニング) Phase2 start =============")
 				block_msg_C = self.crm.get_reference_pool() #ここ1 str
 				print("block_msg_C", block_msg_C)
 				print("block_msg_C", type(block_msg_C))
 				logging.debug("block_msg_C" + str(block_msg_C))
 				logging.debug("======= type =======" + str(type(block_msg_C)))
 				new_message = self.cm.get_message_text(REQUEST_POW, json.dumps(block_msg_C, sort_keys = True ,ensure_ascii = False))
-				logging.debug("REQUEST_POWを全ドメインに送信")
+				logging.info("REQUEST_POWを全ドメインに送信")
 				self.cm.send_msg_to_all_owner_peer(new_message)
+				print("============= self.crm.time_stop_phase1() =============")
+				phase1_time = self.crm.time_stop_phase1()
+				self.crm.phase1_list.append(phase1_time)
+				print("self.crm.Phase1_list", self.crm.phase1_list)
+				print(" ============= (マイニング) Phase2 start =============")
 				# Leader  Layer1側で取得したcroos_reference__type<class 'str'>
 				# Follower Layer1側で取得したcroos_reference__type<class 'list'>
 
@@ -561,19 +569,22 @@ class OwnerCore(object):
 			logging.debug("REQUEST_POW == msg[4] ==" + str(type(msg[4])))
 			msg_loads = json.loads(msg[4])
 			# self.current_crossref(msg_loads)
-			logging.debug("リーダーからのマイニング依頼を受信 --- REQUEST_POW")
-			print("msg_loads is :", type(msg_loads))
+			logging.info("リーダーからのマイニング依頼を受信 --- REQUEST_POW")
+			# print("msg_loads is :", type(msg_loads))
 			logging.debug("msg_loads is " + str( msg_loads))
 			logging.debug("msg_loads is type is" + str(type(msg_loads)))
-			logging.debug("マイニングプールへ保管")
+			logging.info("マイニングプールへ保管")
 			self.crm.cross_reference = eval(msg_loads)
 			msg = self.crm.hysteresis_sig()
 			logging.debug("=================== msg is =================== 1 : " + str(msg))			
 			self.crm.set_new_cross_reference(msg)
-			print("msg is : " + str(type(msg)))
+			# print("msg is : " + str(type(msg)))
+			phase1_time = self.crm.time_stop_phase1()
+			self.crm.phase1_list.append(phase1_time)
+			print("phase1 time is :", phase1_time)
 			logging.debug("=================== msg is =================== 1: " + str(type(msg)))
 			print(" ============= (マイニング) Phase2 start ============= ")
-			logging.debug(" ============= (マイニング) Phase2 start ============= ")
+			logging.info(" ============= (マイニング) Phase2 start ============= ")
 
 			# complete = threading.Timer(30, self.complete_cross_block(msg)) # 条件分岐で
 			# complete.start()
@@ -596,9 +607,9 @@ class OwnerCore(object):
 			logging.debug("秘密鍵:block_hash" + str(msg_d))
 			new_message = self.cm.get_message_text(MSG_CROSS_REFFERENCE_LEADER_AGGREGATION, json.dumps(msg_d, sort_keys = True ,ensure_ascii = False))
 			print("============= start_cross_reference__Leader_aggregation =============")
-			logging.debug("============= start_cross_reference__Leader_aggregation =============")
+			logging.info("============= start_cross_reference__Leader_aggregation =============")
 			self.cm.send_msg(peer ,new_message, delay = False) # リーダーに返信
-			logging.debug("MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信")
+			logging.info("MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信")
 			self.Send_heartbeat
 
 		elif msg[2] == MSG_CROSS_REFFERENCE: #リーダー集約時にはここを通らないはず
@@ -716,6 +727,22 @@ class OwnerCore(object):
 			#ハートビート履歴の更新
 			self.Last_Heartbeat_time() #最終ハートビートの更新
 			#self.Raft_timer_decrement_Follower(msg[4])
+
+	"""	
+	def _get_double_sha256_r1(self,message):
+		return hashlib.sha256(hashlib.sha256(message).digest()).digest()
+
+    def get_hash_r1(self,block):
+		""#
+        正当性確認に使うためブロックのハッシュ値を取る
+            param
+                block: Block
+        ""#
+        print('BlockchainManager: get_hash was called!')
+        block_string = json.dumps(block, ensure_ascii=False, sort_keys=True)
+        # print("BlockchainManager: block_string", block_string)
+        return binascii.hexlify(self._get_double_sha256((block_string).encode('utf-8'))).decode('ascii')
+	"""
 
 	def __get_myip(self):
 		s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)

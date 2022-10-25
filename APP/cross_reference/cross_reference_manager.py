@@ -34,6 +34,7 @@ class CrossReferenceManager:
 		self.ref_block_num = 999
 		self.Block_confirmed = None
 		self.myblock_in = False
+		self.phase1_list = []
 
 	def set_new_cross_reference(self, cross):
 		logging.debug("rq == self.lock1-1")
@@ -107,7 +108,7 @@ class CrossReferenceManager:
 			Current_C.append(self.get_previous_cross_ref())
 			print("hysteresis_sig is 2",Current_C)
 		msg = Current_C[:]
-		logging.debug(msg)
+		# logging.debug(msg)
 		msg_pub = self.gs.add_public_key(json.dumps(msg[:]))
 		self.store_previous_cross_ref(msg_pub)
 		return msg_pub
@@ -154,6 +155,7 @@ class CrossReferenceManager:
 			return d
 
 	def time_start_phase1(self):
+		print("================= time_start_phase1 =================")
 		self.flag1 = True
 		self.timer1 =  time.perf_counter()
 	
