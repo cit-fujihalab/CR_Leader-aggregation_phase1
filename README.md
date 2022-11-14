@@ -2,12 +2,19 @@
 # Phase1計測を合意待ち時間含めた実験ノード
 
 
+本ソースコードは, 2022-05-13に
+電子情報通信学会-NS研究会で発表, [『連合型合意の提案と多数ノードによる性能評価実験』](https://ken.ieice.org/ken/paper/20220513SC9R/)
+の実験で使用するノードの[ソースコード](https://github.com/cit-fujihalab/Cross-ref_for_Many-Nodes)に発生していた通信輻輳
+を改善したソースコードのバージョンとなる.
 
-本ソースコードは以下のソースコードにおける通信輻輳を改善したソースコードとなる.
-https://github.com/cit-fujihalab/Cross-ref_for_Many-Nodes
+また動作環境は以下となる履歴
 
+## 実行環境
 
-## 必要モジュールを以下に記載
+- Ubuntu20.04
+- Python3
+
+### 必要モジュールを以下に記載
 （equirements.shを実行すると以下のコマンドが実行される）
 
 equirements.txtに必要モジュールを記載
