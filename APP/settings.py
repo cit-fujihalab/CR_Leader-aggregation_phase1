@@ -1,5 +1,7 @@
 HOST_IP_LAYER_0 = '??.??.???.??'
 
+HOST_IP_LAYER_0 = '10.84.242.120'
+
 DIF = 1 # difficulty 難易度(suffix = '0' * difficulty)
 REF_COUNT = 10 # 履歴交差規定回数
 LEADER_UPDATE_INTERVAL = 45 # ハートビートを送る間隔 [sec]

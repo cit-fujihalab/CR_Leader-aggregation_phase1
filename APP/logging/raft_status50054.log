@@ -49,3 +49,542 @@
 2022-10-25 17:22:29,492: 履歴交差部に入っているから情報をクリアします.
 2022-10-25 17:23:14,923: debugメッセージ : 現在の時刻の確認
 2022-10-25 17:23:14,924: debugメッセージ : Followerとして居続ける
+2022-10-26 16:35:48,451: 1111111111111111111111111Leader_loop1111111111111111111111111
+2022-10-26 16:35:48,472: 最後の履歴交差から30経過していない
+2022-10-26 16:35:48,472: debugメッセージ : join_DMnetwork
+2022-10-26 16:35:48,472: debugメッセージ : join_DMnetwork
+2022-10-26 16:35:48,480: debugメッセージ : Follower_loop
+2022-10-26 16:35:48,480: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:35:48,480: debugメッセージ : Followerとして居続ける
+2022-10-26 16:36:48,480: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:36:48,481: debugメッセージ : Followerとして居続ける
+2022-10-26 16:37:48,481: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:37:48,481: debugメッセージ : Followerとして居続ける
+2022-10-26 16:38:29,142: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:38:29,189: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:38:29,191: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:38:29,397: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:38:29,397: マイニングプールへ保管
+2022-10-26 16:38:29,417:  ============= (マイニング) Phase2 start ============= 
+2022-10-26 16:38:33,142: 履歴交差部に入っているから情報をクリアします.
+2022-10-26 16:38:48,482: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:38:48,482: debugメッセージ : Followerとして居続ける
+2022-10-26 16:39:14,151: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:39:14,195: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:39:14,197: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:39:14,245: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:39:14,245: マイニングプールへ保管
+2022-10-26 16:39:14,250:  ============= (マイニング) Phase2 start ============= 
+2022-10-26 16:39:18,164: 履歴交差部に入っているから情報をクリアします.
+2022-10-26 16:39:48,483: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:39:48,483: debugメッセージ : Followerとして居続ける
+2022-10-26 16:39:59,162: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:39:59,205: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:39:59,208: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:39:59,252: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:39:59,252: マイニングプールへ保管
+2022-10-26 16:39:59,258:  ============= (マイニング) Phase2 start ============= 
+2022-10-26 16:40:03,187: 履歴交差部に入っているから情報をクリアします.
+2022-10-26 16:40:44,169: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:40:44,212: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:40:44,216: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:40:44,262: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:40:44,262: マイニングプールへ保管
+2022-10-26 16:40:44,267:  ============= (マイニング) Phase2 start ============= 
+2022-10-26 16:40:48,212: 履歴交差部に入っているから情報をクリアします.
+2022-10-26 16:40:48,483: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:40:48,484: debugメッセージ : Followerとして居続ける
+2022-10-26 16:41:29,177: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:41:29,218: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:41:29,221: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:41:29,267: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:41:29,268: マイニングプールへ保管
+2022-10-26 16:41:29,274:  ============= (マイニング) Phase2 start ============= 
+2022-10-26 16:41:33,238: 履歴交差部に入っているから情報をクリアします.
+2022-10-26 16:41:48,484: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:41:48,484: debugメッセージ : Followerとして居続ける
+2022-10-26 16:42:14,186: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:42:14,227: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:42:14,229: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:42:14,280: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:42:14,280: マイニングプールへ保管
+2022-10-26 16:42:14,285:  ============= (マイニング) Phase2 start ============= 
+2022-10-26 16:42:18,268: 履歴交差部に入っているから情報をクリアします.
+2022-10-26 16:42:48,485: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:42:48,486: debugメッセージ : Followerとして居続ける
+2022-10-26 16:42:59,193: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:42:59,238: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:42:59,241: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:42:59,286: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:42:59,286: マイニングプールへ保管
+2022-10-26 16:42:59,293:  ============= (マイニング) Phase2 start ============= 
+2022-10-26 16:43:03,299: 履歴交差部に入っているから情報をクリアします.
+2022-10-26 16:43:44,202: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:43:44,246: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:43:44,248: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:43:44,296: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:43:44,297: マイニングプールへ保管
+2022-10-26 16:43:44,302:  ============= (マイニング) Phase2 start ============= 
+2022-10-26 16:43:48,330: 履歴交差部に入っているから情報をクリアします.
+2022-10-26 16:43:48,486: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:43:48,487: debugメッセージ : Followerとして居続ける
+2022-10-26 16:44:29,212: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:44:29,254: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:44:29,257: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:44:29,308: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:44:29,308: マイニングプールへ保管
+2022-10-26 16:44:29,316:  ============= (マイニング) Phase2 start ============= 
+2022-10-26 16:44:33,363: 履歴交差部に入っているから情報をクリアします.
+2022-10-26 16:44:48,487: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:44:48,487: debugメッセージ : Followerとして居続ける
+2022-10-26 16:45:14,219: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:45:14,263: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:45:14,266: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:45:14,315: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:45:14,315: マイニングプールへ保管
+2022-10-26 16:45:14,320:  ============= (マイニング) Phase2 start ============= 
+2022-10-26 16:45:18,400: 履歴交差部に入っているから情報をクリアします.
+2022-10-26 16:45:48,488: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:45:48,488: debugメッセージ : Followerとして居続ける
+2022-10-26 16:45:59,228: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:45:59,271: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:45:59,274: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:45:59,325: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:45:59,326: マイニングプールへ保管
+2022-10-26 16:45:59,331:  ============= (マイニング) Phase2 start ============= 
+2022-10-26 16:46:44,236: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:46:44,277: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:46:44,280: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:46:44,374: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:46:44,374: マイニングプールへ保管
+2022-10-26 16:46:48,489: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:46:48,489: debugメッセージ : Followerとして居続ける
+2022-10-26 16:47:29,246: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:47:29,290: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:47:29,292: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:47:29,344: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:47:29,344: マイニングプールへ保管
+2022-10-26 16:47:48,490: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:47:48,490: debugメッセージ : Followerとして居続ける
+2022-10-26 16:48:14,253: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:48:14,294: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:48:14,297: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:48:14,346: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:48:14,347: マイニングプールへ保管
+2022-10-26 16:48:48,490: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:48:48,491: debugメッセージ : Followerとして居続ける
+2022-10-26 16:48:59,262: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:48:59,305: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:48:59,308: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:48:59,378: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:48:59,378: マイニングプールへ保管
+2022-10-26 16:49:44,270: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:49:44,314: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:49:44,316: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:49:44,380: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:49:44,380: マイニングプールへ保管
+2022-10-26 16:49:48,491: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:49:48,491: debugメッセージ : Followerとして居続ける
+2022-10-26 16:50:29,278: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:50:29,322: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:50:29,325: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:50:29,425: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:50:29,425: マイニングプールへ保管
+2022-10-26 16:50:48,492: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:50:48,492: debugメッセージ : Followerとして居続ける
+2022-10-26 16:51:14,287: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:51:14,330: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:51:14,333: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:51:14,446: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:51:14,447: マイニングプールへ保管
+2022-10-26 16:51:48,493: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:51:48,493: debugメッセージ : Followerとして居続ける
+2022-10-26 16:51:59,295: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:51:59,338: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:51:59,340: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:51:59,445: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:51:59,445: マイニングプールへ保管
+2022-10-26 16:52:44,303: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:52:44,345: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:52:44,348: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:52:44,470: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:52:44,470: マイニングプールへ保管
+2022-10-26 16:52:48,494: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:52:48,494: debugメッセージ : Followerとして居続ける
+2022-10-26 16:53:29,311: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:53:29,350: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:53:29,352: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:53:29,480: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:53:29,480: マイニングプールへ保管
+2022-10-26 16:53:48,495: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:53:48,495: debugメッセージ : Followerとして居続ける
+2022-10-26 16:54:14,319: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:54:14,363: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:54:14,366: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:54:14,498: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:54:14,499: マイニングプールへ保管
+2022-10-26 16:54:48,496: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:54:48,496: debugメッセージ : Followerとして居続ける
+2022-10-26 16:54:59,328: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:54:59,368: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:54:59,370: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:54:59,504: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:54:59,504: マイニングプールへ保管
+2022-10-26 16:55:44,336: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:55:44,376: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:55:44,379: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:55:44,526: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:55:44,527: マイニングプールへ保管
+2022-10-26 16:55:48,497: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:55:48,497: debugメッセージ : Followerとして居続ける
+2022-10-26 16:56:29,345: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:56:29,387: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:56:29,390: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:56:29,538: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:56:29,539: マイニングプールへ保管
+2022-10-26 16:56:48,497: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:56:48,498: debugメッセージ : Followerとして居続ける
+2022-10-26 16:57:14,352: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:57:14,392: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:57:14,393: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:57:14,560: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:57:14,561: マイニングプールへ保管
+2022-10-26 16:57:48,498: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:57:48,499: debugメッセージ : Followerとして居続ける
+2022-10-26 16:57:59,361: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:57:59,403: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:57:59,405: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:57:59,572: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:57:59,572: マイニングプールへ保管
+2022-10-26 16:58:44,368: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:58:44,405: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:58:44,407: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:58:44,592: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:58:44,593: マイニングプールへ保管
+2022-10-26 16:58:48,499: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:58:48,499: debugメッセージ : Followerとして居続ける
+2022-10-26 16:59:29,376: cross_reference_reset is ok----Full-Reset
+2022-10-26 16:59:29,420: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 16:59:29,422: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 16:59:29,592: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 16:59:29,593: マイニングプールへ保管
+2022-10-26 16:59:48,500: debugメッセージ : 現在の時刻の確認
+2022-10-26 16:59:48,500: debugメッセージ : Followerとして居続ける
+2022-10-26 17:00:14,385: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:00:14,427: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:00:14,430: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:00:14,606: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:00:14,607: マイニングプールへ保管
+2022-10-26 17:00:48,501: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:00:48,501: debugメッセージ : Followerとして居続ける
+2022-10-26 17:00:59,392: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:00:59,431: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:00:59,433: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:00:59,636: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:00:59,637: マイニングプールへ保管
+2022-10-26 17:01:44,400: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:01:44,443: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:01:44,445: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:01:44,636: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:01:44,637: マイニングプールへ保管
+2022-10-26 17:01:48,502: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:01:48,502: debugメッセージ : Followerとして居続ける
+2022-10-26 17:02:29,408: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:02:29,450: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:02:29,452: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:02:29,665: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:02:29,666: マイニングプールへ保管
+2022-10-26 17:02:48,502: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:02:48,503: debugメッセージ : Followerとして居続ける
+2022-10-26 17:03:14,416: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:03:14,460: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:03:14,463: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:03:14,674: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:03:14,675: マイニングプールへ保管
+2022-10-26 17:03:48,503: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:03:48,503: debugメッセージ : Followerとして居続ける
+2022-10-26 17:03:59,425: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:03:59,465: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:03:59,468: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:03:59,693: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:03:59,694: マイニングプールへ保管
+2022-10-26 17:04:44,433: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:04:44,477: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:04:44,480: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:04:44,706: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:04:44,707: マイニングプールへ保管
+2022-10-26 17:04:48,504: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:04:48,504: debugメッセージ : Followerとして居続ける
+2022-10-26 17:05:29,442: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:05:29,483: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:05:29,486: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:05:29,732: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:05:29,733: マイニングプールへ保管
+2022-10-26 17:05:48,505: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:05:48,505: debugメッセージ : Followerとして居続ける
+2022-10-26 17:06:14,450: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:06:14,492: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:06:14,495: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:06:14,746: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:06:14,747: マイニングプールへ保管
+2022-10-26 17:06:48,506: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:06:48,506: debugメッセージ : Followerとして居続ける
+2022-10-26 17:06:59,457: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:06:59,498: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:06:59,501: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:06:59,732: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:06:59,733: マイニングプールへ保管
+2022-10-26 17:07:44,466: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:07:44,506: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:07:44,508: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:07:44,779: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:07:44,780: マイニングプールへ保管
+2022-10-26 17:07:48,506: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:07:48,507: debugメッセージ : Followerとして居続ける
+2022-10-26 17:08:29,475: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:08:29,521: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:08:29,523: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:08:29,790: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:08:29,791: マイニングプールへ保管
+2022-10-26 17:08:48,507: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:08:48,507: debugメッセージ : Followerとして居続ける
+2022-10-26 17:09:14,483: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:09:14,524: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:09:14,526: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:09:14,784: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:09:14,785: マイニングプールへ保管
+2022-10-26 17:09:48,508: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:09:48,508: debugメッセージ : Followerとして居続ける
+2022-10-26 17:09:59,493: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:09:59,538: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:09:59,544: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:09:59,824: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:09:59,825: マイニングプールへ保管
+2022-10-26 17:10:44,500: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:10:44,542: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:10:44,544: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:10:44,810: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:10:44,811: マイニングプールへ保管
+2022-10-26 17:10:48,508: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:10:48,509: debugメッセージ : Followerとして居続ける
+2022-10-26 17:11:29,511: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:11:29,555: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:11:29,559: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:11:29,856: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:11:29,858: マイニングプールへ保管
+2022-10-26 17:11:48,509: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:11:48,510: debugメッセージ : Followerとして居続ける
+2022-10-26 17:12:14,518: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:12:14,559: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:12:14,561: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:12:14,853: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:12:14,854: マイニングプールへ保管
+2022-10-26 17:12:48,511: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:12:48,511: debugメッセージ : Followerとして居続ける
+2022-10-26 17:12:59,529: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:12:59,572: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:12:59,574: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:12:59,863: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:12:59,864: マイニングプールへ保管
+2022-10-26 17:13:44,537: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:13:44,577: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:13:44,580: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:13:44,875: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:13:44,876: マイニングプールへ保管
+2022-10-26 17:13:48,511: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:13:48,512: debugメッセージ : Followerとして居続ける
+2022-10-26 17:14:29,547: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:14:29,587: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:14:29,591: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:14:29,922: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:14:29,924: マイニングプールへ保管
+2022-10-26 17:14:48,512: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:14:48,512: debugメッセージ : Followerとして居続ける
+2022-10-26 17:15:14,556: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:15:14,599: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:15:14,602: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:15:14,962: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:15:14,963: マイニングプールへ保管
+2022-10-26 17:15:48,513: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:15:48,513: debugメッセージ : Followerとして居続ける
+2022-10-26 17:15:59,565: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:15:59,608: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:15:59,610: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:15:59,939: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:15:59,941: マイニングプールへ保管
+2022-10-26 17:16:44,572: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:16:44,616: ============= start_cross_reference__Leader_aggregation =============
+2022-10-26 17:16:44,619: MSG_CROSS_REFFERENCE_LEADER_AGGREGATIONをリーダーに返信
+2022-10-26 17:16:44,970: リーダーからのマイニング依頼を受信 --- REQUEST_POW
+2022-10-26 17:16:44,971: マイニングプールへ保管
+2022-10-26 17:16:48,514: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:16:48,514: debugメッセージ : Followerとして居続ける
+2022-10-26 17:17:35,585: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:17:48,515: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:17:48,515: debugメッセージ : Followerとして居続ける
+2022-10-26 17:18:23,593: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:18:48,516: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:18:48,516: debugメッセージ : Followerとして居続ける
+2022-10-26 17:19:11,613: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:19:48,517: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:19:48,517: debugメッセージ : Followerとして居続ける
+2022-10-26 17:19:59,618: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:20:47,628: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:20:48,517: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:20:48,517: debugメッセージ : Followerとして居続ける
+2022-10-26 17:21:35,637: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:21:48,518: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:21:48,518: debugメッセージ : Followerとして居続ける
+2022-10-26 17:22:23,649: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:22:48,519: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:22:48,519: debugメッセージ : Followerとして居続ける
+2022-10-26 17:23:11,661: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:23:48,520: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:23:48,520: debugメッセージ : Followerとして居続ける
+2022-10-26 17:23:59,669: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:24:47,681: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:24:48,520: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:24:48,521: debugメッセージ : Followerとして居続ける
+2022-10-26 17:25:35,694: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:25:48,521: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:25:48,522: debugメッセージ : Followerとして居続ける
+2022-10-26 17:26:23,705: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:26:48,522: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:26:48,522: debugメッセージ : Followerとして居続ける
+2022-10-26 17:27:11,717: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:27:48,523: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:27:48,523: debugメッセージ : Followerとして居続ける
+2022-10-26 17:27:59,729: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:28:47,738: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:28:48,524: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:28:48,524: debugメッセージ : Followerとして居続ける
+2022-10-26 17:29:35,749: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:29:48,525: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:29:48,525: debugメッセージ : Followerとして居続ける
+2022-10-26 17:30:23,759: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:30:48,525: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:30:48,526: debugメッセージ : Followerとして居続ける
+2022-10-26 17:31:11,770: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:31:48,526: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:31:48,526: debugメッセージ : Followerとして居続ける
+2022-10-26 17:31:59,781: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:32:47,789: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:32:48,527: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:32:48,527: debugメッセージ : Followerとして居続ける
+2022-10-26 17:33:35,801: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:33:48,528: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:33:48,528: debugメッセージ : Followerとして居続ける
+2022-10-26 17:34:23,813: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:34:48,529: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:34:48,529: debugメッセージ : Followerとして居続ける
+2022-10-26 17:35:11,823: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:35:48,530: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:35:48,530: debugメッセージ : Followerとして居続ける
+2022-10-26 17:35:59,834: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:36:47,845: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:36:48,530: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:36:48,530: debugメッセージ : Followerとして居続ける
+2022-10-26 17:37:35,853: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:37:48,531: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:37:48,531: debugメッセージ : Followerとして居続ける
+2022-10-26 17:38:23,862: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:38:48,532: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:38:48,532: debugメッセージ : Followerとして居続ける
+2022-10-26 17:39:11,876: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:39:48,533: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:39:48,533: debugメッセージ : Followerとして居続ける
+2022-10-26 17:39:59,914: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:40:47,897: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:40:48,533: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:40:48,534: debugメッセージ : Followerとして居続ける
+2022-10-26 17:41:35,908: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:41:48,534: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:41:48,535: debugメッセージ : Followerとして居続ける
+2022-10-26 17:42:23,918: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:42:48,535: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:42:48,536: debugメッセージ : Followerとして居続ける
+2022-10-26 17:43:11,929: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:43:48,536: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:43:48,536: debugメッセージ : Followerとして居続ける
+2022-10-26 17:43:59,941: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:44:47,949: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:44:48,537: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:44:48,537: debugメッセージ : Followerとして居続ける
+2022-10-26 17:45:35,961: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:45:48,538: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:45:48,538: debugメッセージ : Followerとして居続ける
+2022-10-26 17:46:23,971: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:46:48,539: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:46:48,539: debugメッセージ : Followerとして居続ける
+2022-10-26 17:47:11,981: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:47:48,539: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:47:48,540: debugメッセージ : Followerとして居続ける
+2022-10-26 17:47:59,991: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:48:48,001: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:48:48,540: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:48:48,540: debugメッセージ : Followerとして居続ける
+2022-10-26 17:49:36,012: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:49:48,541: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:49:48,541: debugメッセージ : Followerとして居続ける
+2022-10-26 17:50:24,024: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:50:48,542: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:50:48,542: debugメッセージ : Followerとして居続ける
+2022-10-26 17:51:12,036: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:51:48,543: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:51:48,543: debugメッセージ : Followerとして居続ける
+2022-10-26 17:52:00,045: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:52:48,057: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:52:48,544: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:52:48,544: debugメッセージ : Followerとして居続ける
+2022-10-26 17:53:36,069: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:53:48,544: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:53:48,545: debugメッセージ : Followerとして居続ける
+2022-10-26 17:54:24,078: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:54:48,545: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:54:48,545: debugメッセージ : Followerとして居続ける
+2022-10-26 17:55:12,093: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:55:48,546: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:55:48,546: debugメッセージ : Followerとして居続ける
+2022-10-26 17:56:00,101: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:56:48,113: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:56:48,547: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:56:48,547: debugメッセージ : Followerとして居続ける
+2022-10-26 17:57:36,125: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:57:48,548: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:57:48,548: debugメッセージ : Followerとして居続ける
+2022-10-26 17:58:24,137: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:58:48,549: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:58:48,549: debugメッセージ : Followerとして居続ける
+2022-10-26 17:59:12,141: cross_reference_reset is ok----Full-Reset
+2022-10-26 17:59:48,550: debugメッセージ : 現在の時刻の確認
+2022-10-26 17:59:48,550: debugメッセージ : Followerとして居続ける
+2022-10-26 18:00:00,155: cross_reference_reset is ok----Full-Reset
+2022-10-26 18:00:48,166: cross_reference_reset is ok----Full-Reset
+2022-10-26 18:00:48,551: debugメッセージ : 現在の時刻の確認
+2022-10-26 18:00:48,551: debugメッセージ : Followerとして居続ける
+2022-10-26 18:01:36,173: cross_reference_reset is ok----Full-Reset
+2022-10-26 18:01:48,552: debugメッセージ : 現在の時刻の確認
+2022-10-26 18:01:48,552: debugメッセージ : Followerとして居続ける
+2022-10-26 18:02:24,185: cross_reference_reset is ok----Full-Reset
+2022-10-26 18:02:48,553: debugメッセージ : 現在の時刻の確認
+2022-10-26 18:02:48,553: debugメッセージ : Followerとして居続ける
+2022-10-26 18:03:12,197: cross_reference_reset is ok----Full-Reset
+2022-10-26 18:03:48,553: debugメッセージ : 現在の時刻の確認
+2022-10-26 18:03:48,554: debugメッセージ : Followerとして居続ける
+2022-10-26 18:04:00,205: cross_reference_reset is ok----Full-Reset
+2022-10-26 18:04:48,215: cross_reference_reset is ok----Full-Reset
+2022-10-26 18:04:48,554: debugメッセージ : 現在の時刻の確認
+2022-10-26 18:04:48,555: debugメッセージ : Followerとして居続ける
+2022-10-26 18:05:36,224: cross_reference_reset is ok----Full-Reset
+2022-10-26 18:05:48,555: debugメッセージ : 現在の時刻の確認
+2022-10-26 18:05:48,556: debugメッセージ : Followerとして居続ける
+2022-10-26 18:06:24,236: cross_reference_reset is ok----Full-Reset
+2022-10-26 18:06:48,556: debugメッセージ : 現在の時刻の確認
+2022-10-26 18:06:48,556: debugメッセージ : Followerとして居続ける
+2022-10-26 18:07:12,241: cross_reference_reset is ok----Full-Reset
+2022-10-26 18:07:48,557: debugメッセージ : 現在の時刻の確認
+2022-10-26 18:07:48,557: debugメッセージ : Followerとして居続ける
+2022-10-26 18:08:00,256: cross_reference_reset is ok----Full-Reset
+2022-10-26 18:08:48,265: cross_reference_reset is ok----Full-Reset
+2022-10-26 18:08:48,558: debugメッセージ : 現在の時刻の確認
+2022-10-26 18:08:48,558: debugメッセージ : Followerとして居続ける

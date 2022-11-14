@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 # coding: utf-8
 import json
+import os
+infilenames_list = []
+for file in os.listdir():
+    base, ext = os.path.splitext(file)
+    if ext == '.json':
+        infilenames_list.append(file)
+        infilenames_list.sort()
 
+"""
 infilenames_list = [
   'Current_Blockchain50051.json', 
   'Current_Blockchain50053.json',
@@ -14,6 +22,7 @@ infilenames_list = [
   #'Current_Blockchain50089.json',
   #'Current_Blockchain50091.json'
 ]
+"""
 
 count_dict = {}
 
