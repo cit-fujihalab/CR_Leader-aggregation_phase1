@@ -6,7 +6,7 @@
 電子情報通信学会-NS研究会で発表, <br>[『連合型合意の提案と多数ノードによる性能評価実験』](https://ken.ieice.org/ken/paper/20220513SC9R/)<br>
 の実験で使用したノードの[ソースコード](https://github.com/cit-fujihalab/Cross-ref_for_Many-Nodes)に発生していた通信輻輳を改善したソースコードのバージョンとなる.
 
-また動作環境は以下となる履歴
+また動作環境と実行方法を次に記載する.
 
 ## 実行環境
 
@@ -43,7 +43,7 @@ APP/settings.py内
 
 IPアドレスの変更(1行目):HOST_IP_LAYER_0 = 'xx.xx.xxx.xx'
 
-## 構築したいP2Pネットワークの規模に応じて起動ノード数を起動
+### 構築したいP2Pネットワークの規模に応じて起動ノード数を起動
 
 ```sh
 $ python3 owner_server0.py
