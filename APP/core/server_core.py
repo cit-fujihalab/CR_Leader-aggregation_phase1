@@ -8,6 +8,7 @@ import os
 from settings import *
 import logging
 import sys
+import numpy as np
 
 from LDB import main_level
 
@@ -68,8 +69,17 @@ class ServerCore(object):
 			# self.get_all_chains_for_resolve_conflict()
 		# self.main_window.set_port(self.my_port)
 
+		if Random_CHECK_INTERVAL_FLAG == True:
+			print("Randomフラグ is True")
+			self.bb_interval = np.random.choice(CHECK_INTERVAL_LIST)
+			print("self.bb_interval is", self.bb_interval)
+
+		else:
+			print("Randomフラグ is Not True")
+			self.bb_interval = CHECK_INTERVAL
+
 	def start_block_building(self):
-		self.bb_timer = threading.Timer(CHECK_INTERVAL, self.__generate_block_with_tp)
+		self.bb_timer = threading.Timer(self.bb_interval, self.__generate_block_with_tp)
 		self.bb_timer.start()
 
 	def stop_block_building(self):
@@ -226,7 +236,7 @@ class ServerCore(object):
 		else:
 			x = REF_COUNT - self.refblock_count
 			print(" =========== 規定履歴交差回数まで残り" + str(x) + "回 =========== ")
-		self.bb_timer = threading.Timer(CHECK_INTERVAL, self.__generate_block_with_tp)
+		self.bb_timer = threading.Timer(self.bb_interval, self.__generate_block_with_tp)
 		self.bb_timer.start()
 
 	def save_json(self, filename, obj):

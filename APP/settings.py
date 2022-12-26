@@ -1,4 +1,4 @@
-HOST_IP_LAYER_0 = '??.??.???.??'
+HOST_IP_LAYER_0 = '10.0.2.15' # '??.??.???.??'
 
 DIF = 1 # difficulty 難易度(suffix = '0' * difficulty)
 REF_COUNT = 10 # 履歴交差規定回数
@@ -22,6 +22,8 @@ HOST_PORT_LAYER_1_origin = HOST_PORT_LAYER_0_origin + 1 # 0番目のオリジン
 
 #Layer-1
 CHECK_INTERVAL = 5 # [min]ブロック生成間隔　# TransactionPoolの確認頻度
+Random_CHECK_INTERVAL_FLAG = False # ブロック不生成間隔
+CHECK_INTERVAL_LIST = [1 ,15 ,30]
 TRANSACTION = 'AD9B477B42B22CDF18B1335603D07378ACE83561D8398FBFC8DE94196C65D806'
 #APP/transaction/transaction_pool.pyのcreate_transactionでtransactionを生成中
 
