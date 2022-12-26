@@ -1,4 +1,4 @@
-HOST_IP_LAYER_0 = '10.0.2.15' # '??.??.???.??'
+HOST_IP_LAYER_0 = '??.??.???.??'
 
 DIF = 1 # difficulty 難易度(suffix = '0' * difficulty)
 REF_COUNT = 10 # 履歴交差規定回数
